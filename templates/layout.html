@@ -1,0 +1,78 @@
+<!-- templates/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SmartShop{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('index') }}" class="nav-brand">🛒 SmartShop</a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search for products...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Get to Know Us</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">SmartShop Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop With Us</h4>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Manage Your Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Let Us Help You</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Rates</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024, SmartShop.com, Inc. or its affiliates. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

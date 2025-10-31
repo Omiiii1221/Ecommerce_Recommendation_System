@@ -1,0 +1,41 @@
+<!-- templates/product.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+{{ details.name }} - SmartShop
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="product-details-container">
+        <a class="back-btn" href="{{ url_for('index') }}">← Back to All Products</a>
+        <div class="product-details">
+            <div class="product-image-wrapper">
+                <img src="{{ details.img }}" alt="Image of {{ details.name }}">
+            </div>
+            <div class="product-info">
+                <h2>{{ details.name }}</h2>
+                <p class="price">₹{{ details.price }}</p>
+                <p class="description">{{ details.desc }}</p>
+                <button class="add-to-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="recommendations">
+        <h2>People Who Bought This Also Bought</h2>
+        <div class="product-grid">
+            {% for item in recommendations %}
+            <div class="product-card">
+                <a href="{{ url_for('product_detail', product_name=item.name) }}">
+                    <img src="{{ item.img }}" alt="Image of {{ item.name }}">
+                    <h3>{{ item.name }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

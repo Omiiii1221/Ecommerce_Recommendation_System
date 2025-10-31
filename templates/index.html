@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+Home - SmartShop Recommender
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Welcome to SmartShop</h1>
+    <p>Discover products and smart recommendations just for you.</p>
+</header>
+
+<main>
+    <div class="product-grid">
+        {% for item in products %}
+        <div class="product-card">
+            <a href="{{ url_for('product_detail', product_name=item.name) }}">
+                <img src="{{ item.img }}" alt="Image of {{ item.name }}">
+                <h3>{{ item.name }}</h3>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
