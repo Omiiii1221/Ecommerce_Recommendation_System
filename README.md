@@ -158,4 +158,4 @@ Shows product description, price, and hybrid recommendations.
 
 **Gaikwad Om**
 📧 [gaikwadom465@gmail.com](mailto:gaikwadom465@gmail.com)
-🌐 [LinkedIn](https://www.linkedin.com/in/gaikwadom465)
+🌐 [LinkedIn](https://www.linkedin.com/in/om-gaikwad-a70421310/)
