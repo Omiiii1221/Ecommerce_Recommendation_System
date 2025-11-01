@@ -23,9 +23,9 @@ The app dynamically displays random products, and upon selecting a product, it s
 
 ---
 
-## 🧠 Recommendation Logic
+## Recommendation Logic
 
-### 🔹 Hybrid Recommendation Formula
+### Hybrid Recommendation Formula
 
 [
 \text{Hybrid Score} = \alpha \times \text{Content Score} + (1 - \alpha) \times \text{Collaborative Score}
@@ -63,14 +63,14 @@ The app dynamically displays random products, and upon selecting a product, it s
 
 ## Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/ecom-recommender.git
 cd ecom-recommender
 ```
 
-### 2️⃣ Create a Virtual Environment
+### 2️ Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -78,17 +78,17 @@ source venv/bin/activate       # (Linux/Mac)
 venv\Scripts\activate          # (Windows)
 ```
 
-### 3️⃣ Install Dependencies
+### 3️ Install Dependencies
 
 ```bash
 pip install flask
 ```
 
-### 4️⃣ Add Model Files
+### 4️ Add Model Files
 
 Place your `co_purchase.pkl`, `content.pkl`, and `products.pkl` files inside the `models/` folder.
 
-### 5️⃣ Run the Application
+### 5️ Run the Application
 
 ```bash
 python app.py
