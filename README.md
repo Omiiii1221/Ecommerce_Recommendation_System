@@ -5,7 +5,7 @@
 
 ---
 
-## Project Overview
+## Project Overview 
 
 This project is a **Hybrid Product Recommendation System** that combines **content-based filtering** and **collaborative filtering** to recommend products to users. It is built using **Flask** as a lightweight backend framework and deployed on **AWS EC2**.
 
